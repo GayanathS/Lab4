@@ -95,10 +95,7 @@ proc my_system(const char *command, struct queue *node)
 
 		}
 
-		//execl (SHELL, SHELL, "-c", command, NULL);
-		//node->process.pid = pid;
 
-		//_exit (EXIT_FAILURE);
 	}
 	else if (pid < 0) {
 		/* The fork failed.  Report failure.  */
@@ -178,24 +175,17 @@ int main(int argc, char *argv[])
 			current3 = current3->next;
 		}
 
-		//time++;
+
 	}
 
-    // Iterate through each item in the job dispatch list, add each process
-    // to the appropriate queues
 
-    // Allocate the resources for each process before it's executed
 	resources res_avail;
 	res_avail.printers = 2;
 	res_avail.scanners = 1;
 	res_avail.modems = 1;
 	res_avail.cds = 2;
 
-    // Execute the process binary using fork and exec
 
-    // Perform the appropriate signal handling / resource allocation and de-alloaction
-
-    // Repeat until all processes have been executed, all queues are empty
      
     return EXIT_SUCCESS;
 }
